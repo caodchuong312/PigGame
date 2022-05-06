@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pig Game</title>
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <link rel="stylesheet" href="./asset/css/responsive.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="overlay hidden"></div>
+
+    <button class="btn btn--modal">🔍 hướng dẫn chơi</button>
+    <div class="modal hidden">
+      <div class="close-modal">
+        <i class="fa-solid fa-xmark"></i>
+      </div>
+      <div class="clear"></div>
+      <h1 class="modal-label">
+        Hướng dẫn chơi (Game này dành cho 2 người nhó :>) :
+      </h1>
+      <p class="modal-tutorial">
+        Mỗi người được roll xúc xắc để lấy điểm. Điểm tạm thời (CURRENT) sẽ tính
+        bằng tổng các lần roll xúc xắc khác 1, nếu roll ra 1 sẽ mất lượt và
+        không được cộng vào điểm chính. Để bảo toàn được số điểm tạm thời bấm
+        HOLD sẽ cộng vào điểm chính và nhường lượt chơi cho người còn lại Ai là
+        người được 100 điểm trước sẽ là người chiến thắng. ( tip nhỏ : cứ từ từ
+        đừng quá tham lam nhé =)) nếu không muốn roll ra 1 để rồi mất điểm ).
+      </p>
+    </div>
+
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player 1</h2>
+        <div class="score" id="score--0">0</div>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--0">0</p>
+        </div>
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player 2</h2>
+        <div class="score" id="score--1">0</div>
+        <div class="current">
+          <p class="current-label">Current</p>
+          <p class="current-score" id="current--1">0</p>
+        </div>
+      </section>
+      <img
+        src="./asset/img/dice-1.png"
+        alt="Playing dice"
+        class="dice hidden"
+      />
+      <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold">📥 Hold</button>
+    </main>
+
+    <script src="./asset/js/script.js"></script>
+  </body>
+</html>
